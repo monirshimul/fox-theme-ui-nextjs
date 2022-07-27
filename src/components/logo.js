@@ -11,6 +11,8 @@ export default function Logo({ src, ...rest }) {
         display: 'flex',
         cursor: 'pointer',
         mr: 15,
+        height:"70px"
+        
       }}
       {...rest}
     >
