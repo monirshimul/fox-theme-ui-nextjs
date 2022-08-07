@@ -4,10 +4,29 @@ import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/logo.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from 'react';
+
+import { useInView } from "react-intersection-observer";
 
 export default function Banner() {
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, x:0, transition:{duration:0.9} },
+    hidden: { opacity: 0, scale: 0, x:700 },
+  }
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+  // console.log("__ref__",inView)
+  useEffect(()=>{
+    if(inView){
+      control.start("visible")
+    }else{
+      control.start("hidden")
+    }
+  },[control, inView])
+  
   return (
-    <section sx={styles.banner} id="home">
+    <motion.section sx={styles.banner} id="home" ref={ref} variants={boxVariant} initial="hidden" animate={control}>
       <Container sx={styles.banner.container}>
         
         <Box sx={styles.banner.contentBox}>
@@ -27,7 +46,7 @@ export default function Banner() {
           <Image src={BannerImg} alt="banner" />
         </Box> */}
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

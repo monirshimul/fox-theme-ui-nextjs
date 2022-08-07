@@ -7,6 +7,9 @@ import Performance from 'assets/feature/performance.svg';
 import Partnership from 'assets/feature/partnership.svg';
 import Subscription from 'assets/feature/subscription.svg';
 import Support from 'assets/feature/support.svg';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from 'react';
+import { useInView } from "react-intersection-observer";
 
 const data = [
   {
@@ -44,12 +47,25 @@ const data = [
 ];
 
 export default function Feature() {
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, x:0, transition:{duration:0.9} },
+    hidden: { opacity: 0, scale: 0, x:700 },
+  }
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+  useEffect(()=>{
+    if(inView){
+      control.start("visible")
+    }else{
+      control.start("hidden")
+    }
+  },[control, inView])
   return (
-    <section sx={{ variant: 'section.feature' }}>
+    <motion.section sx={{ variant: 'section.feature' }} ref={ref} variants={boxVariant} animate={control} initial="hidden">
       <Container>
         <SectionHeader
           slogan="Quality features"
-          title="Amazing useful Services"
+          title="AMAZING USEFUL SERVICES"
         />
 
         <Grid sx={styles.grid}>
@@ -64,7 +80,7 @@ export default function Feature() {
           ))}
         </Grid>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

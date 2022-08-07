@@ -39,7 +39,7 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-          slogan="Whats the function"
+          slogan="PRODUCT i-client"
           title="Let’s see how it works"
           isWhite={true}
         />

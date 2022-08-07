@@ -23,9 +23,9 @@ export default function Footer() {
         </Grid>
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
-          <Link path="/">
+          {/* <Link path="/">
             <Image src={FooterLogo} alt="Logo" />
-          </Link>
+          </Link> */}
           <Box sx={styles.footer.menus}>
             <nav>
               {data.menuItem.map(({ path, label }, i) => (

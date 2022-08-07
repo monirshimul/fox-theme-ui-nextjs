@@ -76,8 +76,8 @@ export default function BlogSection() {
     <section sx={{ variant: 'section.news' }}>
       <Container>
         <SectionHeader
-          slogan="our blog"
-          title="Explore our products for your business solution"
+          slogan="TESTIMONIAL"
+          title="Meet Client Satisfaction"
         />
 
         <Box sx={styles.carouselWrapper}>
