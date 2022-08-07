@@ -24,6 +24,9 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-start',
     mb: -1,
+    padding:"15px",
+    boxShadow:"rgba(132,243,253, 0.25) 0px 5px 25px, rgba(132,243,253, 0.12) 0px -20px 30px, rgba(132,243,253, 0.12) 0px 4px 6px, rgba(132,243,253, 0.17) 0px 12px 13px, rgba(132,243,253, 0.09) 0px -5px 25px",
+    borderRadius:"15px"
   },
 
   img: {
@@ -34,6 +37,7 @@ const styles = {
     ml: -2,
   },
   wrapper: {
+    
     width: '100%',
     display: 'flex',
     flexDirection: 'column',

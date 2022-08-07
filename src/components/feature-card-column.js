@@ -22,11 +22,16 @@ export default function FeatureCardColumn({
 const styles = {
   card: {
     display: 'flex',
-    alignItems: ['center', 'flex-start'],
+    alignItems: ['center', 'center'],
     flexDirection: 'column',
     mb: -1,
     textAlign: ['center', null, 'left'],
     px: [4, null, 0],
+    // boxShadow:"rgba(238,63,34, 0.25) 0px 54px 55px, rgba(238,63,34, 0.12) 0px -12px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -3px 5px",
+    boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",
+    padding:"10px",
+    borderRadius:"20px"
+
   },
   img: {
     mx: ['auto', null, 0],
@@ -36,6 +41,7 @@ const styles = {
   },
   wrapper: {
     width: '100%',
+    padding:"10px",
     display: 'flex',
     flexDirection: 'column',
     title: {
@@ -44,6 +50,7 @@ const styles = {
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3],
+
     },
     subTitle: {
       fontSize: 1,

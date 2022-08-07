@@ -5,11 +5,12 @@ export default {
     text_secondary: '#F8ECD1', // secondary body color
     heading: '#E8F9FD', // primary heading color
     heading_secondary: '#C4DDFF', // heading color
-    background: '#112B3C', // body background color
+    //background: '#112B3C', // body background color
+    background: '#041C32', // body background color
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
     yellow: '#FFA740', // border color
-    primary: '#FF5F00', // primary button and link color
+    primary: '#ee3f22', // primary button and link color
     secondary: '#2563FF', // secondary color - can be used for hover states
     muted: '#E4E4E4', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -149,7 +150,7 @@ export default {
       color: 'heading',
     },
     heroPrimary: {
-      color: 'heading',
+      
       fontSize: [
         '32px',
         '36px',
@@ -163,14 +164,19 @@ export default {
       lineHeight: [1.3, null, null, null, null, 1.2],
       fontWeight: 700,
       mb: [4, null, null, null, null, 5],
+      // background: "-webkit-linear-gradient(#ee3f22, #FF1E00); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+      // background: "-webkit-linear-gradient(left, red , yellow)",
+      // background: "-o-linear-gradient(right, red, yellow)",
+      // background: "-moz-linear-gradient(right, red, yellow)",
+      background: "-webkit-linear-gradient(left, #FF1E00, #00D7FF, #FF1E00, #00D7FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
     },
     heroSecondary: {
-      fontSize: [2, null, '17px', null, null, '19px', 4],
-      lineHeight: [1.9, null, null, 2],
+      fontSize: [2, null, '17px', null, null, '19px', 3],
+      lineHeight: [1.5, null, null, 1.5],
       fontWeight: 'body',
       mb: 5,
       px: [0, null, 5, 6, null, 8, 9],
-      color: 'heading',
+      background: "-webkit-linear-gradient(left, #F5F5F5, #FF1700); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
     },
     title: {
       // extends the text.heading styles

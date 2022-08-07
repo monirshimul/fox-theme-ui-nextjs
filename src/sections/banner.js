@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
-import BannerImg from 'assets/fox-banner.png';
+import BannerImg from 'assets/logo.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 
@@ -9,21 +9,23 @@ export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
+        
         <Box sx={styles.banner.contentBox}>
+        <Box sx={styles.banner.imageBox}>
+          <Image src={BannerImg} alt="banner" />
+        </Box>
           <Heading as="h1" variant="heroPrimary">
-            Top Quality Digital Products To Explore
+            FOXCATCHER IT SOLUTIONS
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Get your blood tests delivered at let home collect sample from the
-            victory of the managements that supplies best design system
-            guidelines ever.
+          Founded on 2019, Foxcatcher IT solutions is a business process outsourcing firm providing extensive offshoring services to overseas clients, focusing on  Real Estate Management, Database Management, App Development (Android, iOS, Appcelerator Titanium platform) etc.
           </Text>
           <Button variant="primary">Explore</Button>
         </Box>
 
-        <Box sx={styles.banner.imageBox}>
+        {/* <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt="banner" />
-        </Box>
+        </Box> */}
       </Container>
     </section>
   );
@@ -68,19 +70,27 @@ const styles = {
       justifyContent: 'center',
     },
     contentBox: {
-      width: ['100%', '90%', '535px', null, '57%', '60%', '68%', '60%'],
+      backgroundColor:"#06283D",
+      width: ['100%', '90%', '535px', null, '60%', '70%', '80%', '90%'],
       mx: 'auto',
       textAlign: 'center',
       mb: ['40px', null, null, null, null, 7],
+      boxShadow:"rgba(238,63,34, 0.25) 0px 40px 45px, rgba(238,63,34, 0.25) 0px -30px 45px, rgba(238,63,34, 0.12) 0px 14px 16px, rgba(238,63,34, 0.17) 0px 10px 35px, rgba(238,63,34, 0.09) 0px -5px 10px",
+      padding:"30px 50px",
+      borderRadius:"20px"
     },
     imageBox: {
       justifyContent: 'center',
       textAlign: 'center',
       display: 'inline-flex',
-      mb: [0, null, -6, null, null, '-40px', null, -3],
+      
       img: {
         position: 'relative',
-        height: [245, 'auto'],
+        width:"120px",
+        height: '120px',
+        borderRadius:"50%",
+        mb: ['30px', null, null, null, null, 5],
+        boxShadow:"rgba(132,243,253, 0.25) 0px 5px 15px, rgba(132,243,253, 0.12) 0px -10px 20px, rgba(132,243,253, 0.12) 0px 4px 6px, rgba(132,243,253, 0.17) 0px 12px 13px, rgba(132,243,253, 0.09) 0px -5px 25px",
       },
     },
   },

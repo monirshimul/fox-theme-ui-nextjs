@@ -49,7 +49,7 @@ export default function Feature() {
       <Container>
         <SectionHeader
           slogan="Quality features"
-          title="Amazing useful features"
+          title="Amazing useful Services"
         />
 
         <Grid sx={styles.grid}>
