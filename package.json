@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
+    "@next/env": "^12.2.4",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.9.5",
     "globby": "^11.0.0",
