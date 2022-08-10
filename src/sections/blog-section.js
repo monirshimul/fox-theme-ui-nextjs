@@ -5,9 +5,10 @@ import SectionHeader from 'components/section-header';
 import PostCard from 'components/post-card.js';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
-import PostThumb1 from 'assets/blog/1.jpg';
-import PostThumb2 from 'assets/blog/2.jpg';
-import PostThumb3 from 'assets/blog/3.jpg';
+import PostThumb1 from 'assets/blog/man.png';
+import PostThumb2 from 'assets/blog/userOne.png';
+import PostThumb3 from 'assets/blog/userTwo.png';
+import PostThumb4 from 'assets/blog/userThree.png';
 
 const data = [
   {
@@ -39,7 +40,7 @@ const data = [
   },
   {
     id: 4,
-    imgSrc: PostThumb2,
+    imgSrc: PostThumb4,
     altText: 'Creative',
     postLink: '#',
     title: 'Product Marketing: Creative Market',
@@ -73,7 +74,7 @@ const responsive = {
 
 export default function BlogSection() {
   return (
-    <section sx={{ variant: 'section.news' }}>
+    <section sx={{ variant: 'section.news' }} style={{marginTop:"150px"}}>
       <Container>
         <SectionHeader
           slogan="TESTIMONIAL"
@@ -123,8 +124,10 @@ export default function BlogSection() {
 
 const styles = {
   carouselWrapper: {
+    
     '.carousel-container': {
       mx: -3,
+      paddingTop:"30px",
     },
   },
 };

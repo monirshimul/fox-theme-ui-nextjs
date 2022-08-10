@@ -67,7 +67,7 @@ export default function KeyFeature() {
           slogan="Whats the function"
           title="MEET OUR PRODUCTS"
         />
-      <motion.section ref={ref} variants={boxVariant} animate={control} initial="hidden">
+      <section>
       <Grid sx={styles.grid}>
                 {data.map((item) => (
                   <FeatureCardColumn
@@ -79,7 +79,7 @@ export default function KeyFeature() {
                   />
                 ))}
               </Grid>
-      </motion.section>
+      </section>
         
       </Container>
     </section>

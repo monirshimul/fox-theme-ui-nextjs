@@ -37,7 +37,7 @@ export default function Header({ className }) {
             variant="secondary"
             aria-label="Get Started"
           >
-            Get Started
+            Get Subscribed
           </Button>
 
           <MobileDrawer />
@@ -80,7 +80,7 @@ const styles = {
     '&.sticky': {
       position: 'fixed',
       backgroundColor: 'background',
-      color: '#000000',
+      color: '#fff',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
       py: 3,
       'nev > a': {

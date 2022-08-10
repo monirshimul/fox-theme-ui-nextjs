@@ -39,7 +39,7 @@ export default function Footer() {
             </nav>
           </Box>
           <Text sx={styles.footer.copyright}>
-            Copyright by {new Date().getFullYear()} RedQ, Inc
+            Copyright by {new Date().getFullYear()} <span style={{color:"#ee3f22"}}>Foxcatcher ITS</span>
           </Text>
         </Box>
       </Container>

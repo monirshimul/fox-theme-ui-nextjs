@@ -6,32 +6,60 @@ import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from 'react';
+import { keyframes } from '@emotion/react'
 
 import { useInView } from "react-intersection-observer";
 
 export default function Banner() {
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, x:0, transition:{duration:0.9} },
-    hidden: { opacity: 0, scale: 0, x:700 },
+  // const boxVariant = {
+  //   visible: { opacity: 1, scale: 1, x:0, transition:{duration:0.9} },
+  //   hidden: { opacity: 0, scale: 0, x:700 },
+  // }
+  // const control = useAnimation()
+  // const [ref, inView] = useInView()
+  // // console.log("__ref__",inView)
+  // useEffect(()=>{
+  //   if(inView){
+  //     control.start("visible")
+  //   }else{
+  //     control.start("hidden")
+  //   }
+  // },[control, inView])
+  const rotating = keyframes`
+  from {
+    transform: rotate(0deg);
   }
-  const control = useAnimation()
-  const [ref, inView] = useInView()
-  // console.log("__ref__",inView)
-  useEffect(()=>{
-    if(inView){
-      control.start("visible")
-    }else{
-      control.start("hidden")
-    }
-  },[control, inView])
+  to {
+    transform: rotate(360deg);
+  }
+  `
+  const transitionImage = `
+    transition : all ease-in-out
+  `
   
   return (
-    <motion.section sx={styles.banner} id="home" ref={ref} variants={boxVariant} initial="hidden" animate={control}>
+    <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         
         <Box sx={styles.banner.contentBox}>
         <Box sx={styles.banner.imageBox}>
-          <Image src={BannerImg} alt="banner" />
+          
+          {/* <Image src={BannerImg} sx={{animation: `rotate 1.5s linear infinite`}} alt="banner" /> */}
+          <motion.img src={BannerImg} alt="banner"
+            animate={{
+              scale: 1,
+              rotate: 360,
+              
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              
+            }}
+            style={{margin:"0", padding:"0"}}
+          />
+          
         </Box>
           <Heading as="h1" variant="heroPrimary">
             FOXCATCHER IT SOLUTIONS
@@ -46,7 +74,7 @@ export default function Banner() {
           <Image src={BannerImg} alt="banner" />
         </Box> */}
       </Container>
-    </motion.section>
+    </section>
   );
 }
 
@@ -96,7 +124,11 @@ const styles = {
       mb: ['40px', null, null, null, null, 7],
       boxShadow:"rgba(238,63,34, 0.25) 0px 40px 45px, rgba(238,63,34, 0.25) 0px -30px 45px, rgba(238,63,34, 0.12) 0px 14px 16px, rgba(238,63,34, 0.17) 0px 10px 35px, rgba(238,63,34, 0.09) 0px -5px 10px",
       padding:"30px 50px",
-      borderRadius:"20px"
+      borderRadius:"20px",
+      transition: 'ease-in-out 0.4s',
+      '&:hover':{
+        boxShadow:"none",
+      }
     },
     imageBox: {
       justifyContent: 'center',

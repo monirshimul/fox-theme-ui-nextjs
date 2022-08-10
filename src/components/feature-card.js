@@ -26,7 +26,11 @@ const styles = {
     mb: -1,
     padding:"15px",
     boxShadow:"rgba(132,243,253, 0.25) 0px 5px 25px, rgba(132,243,253, 0.12) 0px -20px 30px, rgba(132,243,253, 0.12) 0px 4px 6px, rgba(132,243,253, 0.17) 0px 12px 13px, rgba(132,243,253, 0.09) 0px -5px 25px",
-    borderRadius:"15px"
+    borderRadius:"15px",
+    transition: 'ease-in-out 0.4s',
+      '&:hover':{
+        boxShadow:"0 4px 10px rgba(39, 83, 123, 0.5)",
+      }
   },
 
   img: {
@@ -48,6 +52,7 @@ const styles = {
       lineHeight: 1.4,
       fontWeight: 700,
       mb: ['10px', null, '15px'],
+      
     },
 
     subTitle: {

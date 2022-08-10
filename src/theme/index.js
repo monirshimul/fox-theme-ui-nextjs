@@ -185,6 +185,7 @@ export default {
       fontSize: [3, null, 4],
       lineHeight: 1.25,
       mb: 1,
+      
     },
     lead: {
       fontSize: 40,
@@ -193,6 +194,7 @@ export default {
       lineHeight: '60px',
       letterSpacing: '-1.5px',
       color: '#0F2137',
+      background: "-webkit-linear-gradient(left, #FF1E00, #00D7FF, #FF1E00, #00D7FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
     },
     muted: {
       lineHeight: '26px',

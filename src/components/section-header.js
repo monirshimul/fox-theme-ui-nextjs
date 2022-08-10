@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Heading } from 'theme-ui';
 
-export default function SectionHeader({ title, slogan, isWhite }) {
+export default function SectionHeader({ title, slogan, isWhite, forWorkflow }) {
   return (
     <Box sx={{ variant: 'sectionHeader' }}>
       <Text
@@ -19,6 +19,7 @@ export default function SectionHeader({ title, slogan, isWhite }) {
         sx={{
           variant: 'sectionHeader.title',
           color: isWhite ? 'white' : 'heading',
+          background: forWorkflow ? "" : "-webkit-linear-gradient(left, #FF1E00, #00D7FF, #FF1E00, #00D7FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
         }}
       >
         {title}

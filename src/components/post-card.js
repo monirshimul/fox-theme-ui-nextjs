@@ -33,13 +33,13 @@ export default function PostCard({
 
 const styles = {
   card: {
-    backgroundColor: 'white',
-    boxShadow: '0px 4px 10px rgba(38,78,118,0.12)',
+    backgroundColor: '#041c32',
+    boxShadow:"0 4px 10px rgba(238,63,34, 0.5)",
     borderRadius: '7px',
     m: '0 15px 40px',
-    transition: 'all 0.3s',
+    transition: 'ease-in-out 0.4s',
     '&:hover': {
-      boxShadow: '0px 5px 20px rgba(38,78,118,0.15)',
+      boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",
     },
   },
 
@@ -47,8 +47,13 @@ const styles = {
     borderRadius: '7px 7px 0 0',
     overflow: 'hidden',
     display: 'flex',
+    justifyContent:"center",
+    paddingTop:"50px",
     img: {
-      width: '100%',
+      width: '40%',
+      height:"40%",
+      borderRadius:"50%",
+      boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",    
     },
   },
   postContent: {

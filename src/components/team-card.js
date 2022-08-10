@@ -35,8 +35,10 @@ const styles = {
     transition: 'ease-in-out 0.4s',
     borderRadius: '8px',
     position: 'relative',
+    boxShadow:"0 4px 10px rgba(39, 83, 123, 0.5)",
+    
     '&:hover': {
-      boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
+      boxShadow: ['none', null, 'rgba(132,243,253, 0.25) 0px 5px 25px, rgba(132,243,253, 0.12) 0px -20px 30px, rgba(132,243,253, 0.12) 0px 4px 6px, rgba(132,243,253, 0.17) 0px 12px 13px, rgba(132,243,253, 0.09) 0px -5px 25px'],
       '.info__name': {
         color: 'primary',
       },

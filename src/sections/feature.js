@@ -61,7 +61,7 @@ export default function Feature() {
     }
   },[control, inView])
   return (
-    <motion.section sx={{ variant: 'section.feature' }} ref={ref} variants={boxVariant} animate={control} initial="hidden">
+    <section sx={{ variant: 'section.feature' }} style={{marginTop:"50px"}}>
       <Container>
         <SectionHeader
           slogan="Quality features"
@@ -80,7 +80,7 @@ export default function Feature() {
           ))}
         </Grid>
       </Container>
-    </motion.section>
+    </section>
   );
 }
 

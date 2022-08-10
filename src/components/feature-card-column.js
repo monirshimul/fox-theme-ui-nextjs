@@ -30,7 +30,11 @@ const styles = {
     // boxShadow:"rgba(238,63,34, 0.25) 0px 54px 55px, rgba(238,63,34, 0.12) 0px -12px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -3px 5px",
     boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",
     padding:"10px",
-    borderRadius:"20px"
+    borderRadius:"20px",
+    transition: 'ease-in-out 0.5s',
+      '&:hover':{
+        boxShadow:"rgba(132,243,253, 0.25) 0px 5px 25px, rgba(132,243,253, 0.12) 0px -20px 30px, rgba(132,243,253, 0.12) 0px 4px 6px, rgba(132,243,253, 0.17) 0px 12px 13px, rgba(132,243,253, 0.09) 0px -5px 25px",
+      }
 
   },
   img: {

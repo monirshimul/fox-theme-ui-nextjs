@@ -42,6 +42,7 @@ export default function WorkFlow() {
           slogan="PRODUCT i-client"
           title="Let’s see how it works"
           isWhite={true}
+          forWorkflow={true}
         />
 
         <Grid sx={styles.grid}>
