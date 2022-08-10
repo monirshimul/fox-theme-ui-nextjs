@@ -74,7 +74,7 @@ const responsive = {
 
 export default function BlogSection() {
   return (
-    <section sx={{ variant: 'section.news' }} style={{marginTop:"150px"}}>
+    <section sx={{ variant: 'section.news' }} style={{marginTop:"150px"}} id="testimonial">
       <Container>
         <SectionHeader
           slogan="TESTIMONIAL"

@@ -61,7 +61,7 @@ export default function KeyFeature() {
     }
   },[control, inView])
   return (
-    <section sx={{ variant: 'section.keyFeature' }} id="feature" >
+    <section sx={{ variant: 'section.keyFeature' }} id="products" >
       <Container>
         <SectionHeader
           slogan="Whats the function"

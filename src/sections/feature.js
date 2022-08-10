@@ -61,7 +61,7 @@ export default function Feature() {
     }
   },[control, inView])
   return (
-    <section sx={{ variant: 'section.feature' }} style={{marginTop:"50px"}}>
+    <section sx={{ variant: 'section.feature' }} style={{marginTop:"50px"}} id="services">
       <Container>
         <SectionHeader
           slogan="Quality features"
