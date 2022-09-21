@@ -1,22 +1,21 @@
 /** @jsx jsx */
-import { jsx, Image } from 'theme-ui';
-import { Link } from 'components/link';
+import { jsx, Image } from "theme-ui";
+import { Link } from "components/link";
 
 export default function Logo({ src, ...rest }) {
   return (
     <Link
       path="/"
       sx={{
-        variant: 'links.logo',
-        display: 'flex',
-        cursor: 'pointer',
+        variant: "links.logo",
+        display: "flex",
+        cursor: "pointer",
         mr: 15,
-        height:"70px"
-        
+        height: "70px",
       }}
       {...rest}
     >
-      <Image src={src} alt="startup landing logo" />
+      <Image src={src} alt="logo" />
     </Link>
   );
 }

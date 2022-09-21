@@ -157,26 +157,24 @@ export default {
         '42px',
         '40px',
         '42px',
-        '52px',
-        '58px',
-        '66px',
+        '42px',
+        '45px',
+        '47px',
       ],
       lineHeight: [1.3, null, null, null, null, 1.2],
       fontWeight: 700,
+      color: '#ee3f22',
       mb: [4, null, null, null, null, 5],
-      // background: "-webkit-linear-gradient(#ee3f22, #FF1E00); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
-      // background: "-webkit-linear-gradient(left, red , yellow)",
-      // background: "-o-linear-gradient(right, red, yellow)",
-      // background: "-moz-linear-gradient(right, red, yellow)",
-      background: "-webkit-linear-gradient(left, #FF1E00, #00D7FF, #FF1E00, #00D7FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+      //background: "-webkit-linear-gradient(left, #FF1E00, #00D7FF, #FF1E00, #00D7FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
     },
     heroSecondary: {
-      fontSize: [2, null, '17px', null, null, '19px', 3],
+      fontSize: [2, null, '17px', null, null, '19px', 5],
       lineHeight: [1.5, null, null, 1.5],
       fontWeight: 'body',
       mb: 5,
       px: [0, null, 5, 6, null, 8, 9],
-      background: "-webkit-linear-gradient(left, #F5F5F5, #FF1700); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+      //background: "-webkit-linear-gradient(left, #F5F5F5, #FF1700); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+      color:"#A2B5BB"
     },
     title: {
       // extends the text.heading styles

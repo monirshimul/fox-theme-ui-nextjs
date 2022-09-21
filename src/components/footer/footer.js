@@ -1,8 +1,42 @@
 /** @jsx jsx */
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
-import { Link } from 'components/link';
+// import { Link } from 'components/link';
+import Link from 'next/link'
 import data from './footer.data';
 import FooterLogo from 'assets/logo.svg';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+  FaYoutube
+} from 'react-icons/fa';
+
+const social = [
+  {
+    path: 'https://www.facebook.com/',
+    icon: <FaFacebookF />,
+  },
+  {
+    path: 'https://www.linkedin.com/',
+    icon: <FaLinkedin />,
+  },
+  {
+    path: 'https://twitter.com/',
+    icon: <FaTwitter />,
+  },
+  {
+    path: 'https://github.com/FoxCatcher-IT-Solutions',
+    icon: <FaGithub />,
+  },
+  {
+    path: 'https://www.youtube.com/',
+    icon: <FaYoutube />,
+  },
+  
+];
+
+
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
@@ -26,7 +60,7 @@ export default function Footer() {
           {/* <Link path="/">
             <Image src={FooterLogo} alt="Logo" />
           </Link> */}
-          <Box sx={styles.footer.menus}>
+          {/* <Box sx={styles.footer.menus}>
             <nav>
               {data.menuItem.map(({ path, label }, i) => (
                 <Link
@@ -37,6 +71,15 @@ export default function Footer() {
                 />
               ))}
             </nav>
+          </Box> */}
+          <Box sx={styles.menuFooter}>
+            <Box sx={styles.social}>
+              {social.map(({ path, icon }, i) => (
+                <Box as="span" key={i} sx={styles.social.icon}>
+                  <Link href={path}>{icon}</Link>
+                </Box>
+              ))}
+            </Box>
           </Box>
           <Text sx={styles.footer.copyright}>
             Copyright by {new Date().getFullYear()} <span style={{color:"#ee3f22"}}>Foxcatcher ITS</span>
@@ -89,6 +132,38 @@ const styles = {
       width: '100%',
     },
   },
+  menuFooter: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    mt: 'auto',
+  },
+
+  social: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    mb:"10px",
+
+    icon: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: '#fff',
+      fontSize: 20,
+      mr: '15px',
+      transition: 'all 0.25s',
+      cursor: 'pointer',
+      ':last-child': {
+        mr: '0',
+      },
+      '&:hover': {
+        color: '#ee3f22',
+      },
+    },
+  },
   widgets: {
     py: [8, null, 9],
     px: [4, 0, 3, null, 7, 10],
@@ -99,7 +174,7 @@ const styles = {
       'repeat(1,1fr)',
       null,
       'repeat(2,1fr)',
-      'repeat(3,1fr)',
+      'repeat(2,1fr)',
     ],
     widgetItem: {
       textAlign: 'center',

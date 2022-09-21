@@ -1,11 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 export default function SEO({
-  description = 'startup product landing page',
-  author = 'RedQ, Inc',
+  description = "End to End IT Solution Provider Operating in South East Asia's Fastest Growing IT Hub Bangladesh. Experienced in Providing Offshore & Custom Software Development Services With Excellence.",
+  author = "FoxCatcher IT Solutions",
   meta,
-  title = 'startup landing title',
+  title = "FoxCatcher IT Solutions",
+  image = "/img/newLogo.png",
 }) {
   const metaData = [
     {
@@ -39,6 +40,22 @@ export default function SEO({
     {
       name: `twitter:description`,
       content: description,
+    },
+    {
+      name: "og:image",
+      content: image,
+    },
+    {
+      name: "og:image:type",
+      content: "image/png",
+    },
+    {
+      name: "og:image:width",
+      content: 1024,
+    },
+    {
+      name: "og:image:height",
+      content: 1024,
     },
   ].concat(meta);
   return (

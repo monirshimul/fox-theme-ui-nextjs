@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@next/env": "^12.2.4",
+    "axios": "^0.27.2",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.9.5",
     "globby": "^11.0.0",
@@ -19,6 +22,7 @@
     "next": "9.5.3",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.4",
+    "nodemailer": "^6.7.8",
     "prettier": "^2.1.2",
     "rc-drawer": "^4.1.0",
     "react": "16.13.0",

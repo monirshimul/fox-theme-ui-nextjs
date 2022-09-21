@@ -50,10 +50,10 @@ const styles = {
     justifyContent:"center",
     paddingTop:"50px",
     img: {
-      width: '40%',
-      height:"40%",
-      borderRadius:"50%",
-      boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",    
+      width: '20%',
+      height:"20%",
+      borderRadius:"10%",
+      // boxShadow:"rgba(238,63,34, 0.25) 0px 5px 25px, rgba(238,63,34, 0.12) 0px -20px 30px, rgba(238,63,34, 0.12) 0px 4px 6px, rgba(238,63,34, 0.17) 0px 12px 13px, rgba(238,63,34, 0.09) 0px -5px 25px",    
     },
   },
   postContent: {

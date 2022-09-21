@@ -4,32 +4,39 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from '../../contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link'
 import {
   FaFacebookF,
   FaTwitter,
-  FaGithubAlt,
-  FaDribbble,
+  FaGithub,
+  FaLinkedin,
+  FaYoutube
 } from 'react-icons/fa';
 import menuItems from './header.data';
 
 const social = [
   {
-    path: '/',
+    path: 'https://www.facebook.com/',
     icon: <FaFacebookF />,
   },
   {
-    path: '/',
+    path: 'https://www.linkedin.com/',
+    icon: <FaLinkedin />,
+  },
+  {
+    path: 'https://twitter.com/',
     icon: <FaTwitter />,
   },
   {
-    path: '/',
-    icon: <FaGithubAlt />,
+    path: 'https://github.com/FoxCatcher-IT-Solutions',
+    icon: <FaGithub />,
   },
   {
-    path: '/',
-    icon: <FaDribbble />,
+    path: 'https://www.youtube.com/',
+    icon: <FaYoutube />,
   },
+  
 ];
 
 const MobileDrawer = () => {
@@ -60,7 +67,7 @@ const MobileDrawer = () => {
         <Box sx={styles.content}>
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to={path}
                 spy={true}
@@ -70,7 +77,7 @@ const MobileDrawer = () => {
                 key={i}
               >
                 {label}
-              </Link>
+              </ScrollLink>
             ))}
           </Box>
 
@@ -78,7 +85,7 @@ const MobileDrawer = () => {
             <Box sx={styles.social}>
               {social.map(({ path, icon }, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
-                  <Link to={path}>{icon}</Link>
+                  <Link href={path}>{icon}</Link>
                 </Box>
               ))}
             </Box>
@@ -105,7 +112,7 @@ const styles = {
   drawer: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'dark',
+    backgroundColor: '#041c32',
   },
 
   close: {
@@ -117,6 +124,7 @@ const styles = {
     right: '30px',
     zIndex: '1',
     cursor: 'pointer',
+    backgroundColor:"#ee3f22"
   },
 
   content: {
@@ -142,10 +150,10 @@ const styles = {
       borderBottom: '1px solid #e8e5e5',
       transition: 'all 0.25s',
       '&:hover': {
-        color: 'secondary',
+        color: '#ee3f22',
       },
       '&.active': {
-        color: 'secondary',
+        color: '#ee3f22',
       },
     },
   },
@@ -168,8 +176,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: 'text',
-      fontSize: 14,
+      color: '#fff',
+      fontSize: 24,
       mr: '15px',
       transition: 'all 0.25s',
       cursor: 'pointer',
@@ -177,7 +185,7 @@ const styles = {
         mr: '0',
       },
       '&:hover': {
-        color: 'secondary',
+        color: '#ee3f22',
       },
     },
   },

@@ -34,11 +34,11 @@ const styles = {
   },
 
   img: {
-    width: ['70px', null, null, '80px', '90px', 'auto'],
-    height: 'auto',
+    width: ['70px', null, null, '80px', '90px', '70px'],
+    height: '70px',
     flexShrink: 0,
     mr: [2, 3, null, null, 4, 5],
-    ml: -2,
+    ml: 1,
   },
   wrapper: {
     

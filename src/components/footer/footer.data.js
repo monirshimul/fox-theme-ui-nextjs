@@ -8,26 +8,19 @@ export default {
       id: 1,
       iconSrc: Chat,
       altText: 'Community',
-      title: 'Join the Community',
+      title: 'Regional Office Address',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+        'House: 140, Road: 4, Avenue: 4, Mirpur-DOHS, Dhaka-1216',
     },
     {
       id: 2,
       iconSrc: Community,
       altText: 'Chat',
-      title: 'Chat Communication',
+      title: 'Overseas Office Address',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      '90 State st. Suite 700 Office 40 , Albany, NY 12207 ',
     },
-    {
-      id: 3,
-      iconSrc: Github,
-      altText: 'Github',
-      title: 'Github Access',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
-    },
+    
   ],
   menuItem: [
     {
